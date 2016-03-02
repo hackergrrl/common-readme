@@ -1,3 +1,0 @@
-#!/bin/bash
-
-cat template.md | sed "s/REPO/${1}/g"

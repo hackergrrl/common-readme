@@ -6,6 +6,6 @@
     "url": "git://github.com/noffle/generate-readme.git"
   },
   "bin": {
-    "generate-readme": "generate-readme"
+    "generate-readme": "cli.js"
   }
 }
