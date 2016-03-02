@@ -1,0 +1,11 @@
+{
+  "name": "generate-readme",
+  "description": "Generates a readme for your node modules.",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/noffle/generate-readme.git"
+  },
+  "bin": {
+    "generate-readme": "generate-readme"
+  }
+}
