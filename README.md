@@ -1,4 +1,4 @@
-# generate-readme
+# common-readme
 
 > Writes a markdown readme for your node module to standard out.
 
@@ -9,7 +9,7 @@ making of my own modules and from reading the READMEs of many dozens more.
 
 ## usage
 
-    $ generate-readme my-module
+    $ common-readme my-module
     # my-module
 
     > one-liner description
@@ -61,7 +61,7 @@ making of my own modules and from reading the READMEs of many dozens more.
 With [npm](https://npmjs.org/) installed, run
 
 ```
-$ npm install generate-readme
+$ npm install common-readme
 ```
 
 ## license
