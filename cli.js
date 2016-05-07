@@ -3,6 +3,7 @@
 var spawn = require('child_process').spawn
 var fs = require('fs')
 var path = require('path')
+var camel = require('camelcase')
 
 var repo
 
@@ -20,8 +21,11 @@ if (!repo && process.argv.length !== 3) {
   process.exit(0)
 }
 
+var repoCamel = camel(repo)
+
 fs.readFileSync(path.join(__dirname, 'template.md')).toString().split('\n')
   .forEach(function (line) {
     line = line.replace(/REPO/, repo)
+    line = line.replace(/rePo/, repoCamel)
     console.log(line)
   })

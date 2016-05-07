@@ -11,7 +11,7 @@ background details relevant to understanding what this module does
 Let's do X.
 
 ```js
-var REPO = require('REPO')
+var rePo = require('REPO')
 
 ```
 
@@ -23,10 +23,10 @@ This will output
 ## API
 
 ```js
-var REPO = require('REPO')
+var rePo = require('REPO')
 ```
 
-### REPO(...)
+### rePo(...)
 
 Does X and returns Y
 
