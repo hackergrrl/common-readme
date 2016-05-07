@@ -5,8 +5,11 @@ var fs = require('fs')
 var path = require('path')
 var camel = require('camelcase')
 
+var args = require('minimist')(process.argv)
+
 var repo
 var oneliner = 'one-liner description of the module'
+var license = args.l || args.license || 'ISC'
 
 var pkg = require('./package.json')
 if (pkg && pkg.name) {
@@ -19,7 +22,7 @@ if (process.argv.length === 3) {
 }
 
 if (!repo && process.argv.length !== 3) {
-  console.log('USAGE: generate-readme [repo-name]')
+  console.log('USAGE: generate-readme [REPO-NAME] [-l|--license LICENSE]')
   process.exit(0)
 }
 
@@ -30,5 +33,6 @@ fs.readFileSync(path.join(__dirname, 'template.md')).toString().split('\n')
     line = line.replace(/REPO/, repo)
     line = line.replace(/rePo/, repoCamel)
     line = line.replace(/1LINER/, oneliner)
+    line = line.replace(/ZEE_LICENSE/, license)
     console.log(line)
   })

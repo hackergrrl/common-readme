@@ -9,6 +9,7 @@
     "common-readme": "cli.js"
   },
   "dependencies": {
-    "camelcase": "^3.0.0"
+    "camelcase": "^3.0.0",
+    "minimist": "^1.2.0"
   }
 }

@@ -40,4 +40,4 @@ $ npm install REPO
 
 ## License
 
-ISC
+ZEE_LICENSE
