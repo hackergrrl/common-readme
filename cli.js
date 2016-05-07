@@ -2,9 +2,19 @@
 
 var spawn = require('child_process').spawn
 
-var repo = process.argv[2] || require('./package.json').name
+var repo
+
+var pkg = require('./package.json')
+if (pkg && pkg.name) {
+  repo = pkg.name
+}
+
+if (process.argv.length === 3) {
+  repo = process.argv[2]
+}
+
 if (!repo && process.argv.length !== 3) {
-  console.log('USAGE: generate-readme REPO')
+  console.log('USAGE: generate-readme [repo-name]')
   process.exit(0)
 }
 
