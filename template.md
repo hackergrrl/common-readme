@@ -2,37 +2,35 @@
 
 > one-liner description
 
-## background
+## Background
 
 background details relevant to understanding what this module does
 
-## example
+## Usage
+
+Let's do X.
 
 ```js
-var lib = require('REPO')
+var REPO = require('REPO')
 
 ```
 
-```shell
-$ node
+This will output
 
-> var lib = require('REPO')
-
-> lib.foo()
-'example usage with output'
+```
 ```
 
-## api
+## API
 
-### var obj = new lib()
+```js
+var REPO = require('REPO')
+```
 
-Returns an object ...
+### REPO(...)
 
-### obj.foo()
+Does X and returns Y
 
-Methods on `lib`
-
-## install
+## Install
 
 With [npm](https://npmjs.org/) installed, run
 
@@ -40,6 +38,6 @@ With [npm](https://npmjs.org/) installed, run
 $ npm install REPO
 ```
 
-## license
+## License
 
 ISC
