@@ -6,10 +6,12 @@ var path = require('path')
 var camel = require('camelcase')
 
 var repo
+var oneliner = 'one-liner description of the module'
 
 var pkg = require('./package.json')
 if (pkg && pkg.name) {
   repo = pkg.name
+  oneliner = pkg.description
 }
 
 if (process.argv.length === 3) {
@@ -27,5 +29,6 @@ fs.readFileSync(path.join(__dirname, 'template.md')).toString().split('\n')
   .forEach(function (line) {
     line = line.replace(/REPO/, repo)
     line = line.replace(/rePo/, repoCamel)
+    line = line.replace(/1LINER/, oneliner)
     console.log(line)
   })

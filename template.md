@@ -1,6 +1,6 @@
 # REPO
 
-> one-liner description
+> 1LINER
 
 ## Background
 
