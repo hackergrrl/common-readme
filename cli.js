@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var spawn = require('child_process').spawn
+var fs = require('fs')
+var path = require('path')
 
 var repo
 
@@ -18,6 +20,8 @@ if (!repo && process.argv.length !== 3) {
   process.exit(0)
 }
 
-var cmd = 'cat ' + __dirname + '/template.md | sed "s/REPO/' + repo + '/g"'
-var s = spawn('sh', ['-c', cmd])
-s.stdout.pipe(process.stdout)
+fs.readFileSync(path.join(__dirname, 'template.md')).toString().split('\n')
+  .forEach(function (line) {
+    line = line.replace(/REPO/, repo)
+    console.log(line)
+  })
