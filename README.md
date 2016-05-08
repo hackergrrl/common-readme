@@ -173,6 +173,23 @@ $ npm install -g common-readme
 
 to be able to execute the `common-readme` command.
 
+## Acknowledgments
+
+common-readme was greatly inspired by the ideas brewing in
+`zwei/standard-readme` and `richardlitt/standard-readme`, as well as the radical
+honey-badger-esque standardization of `feross/standard`.
+
+Thanks to @mafintosh and @feross and @andrewosh for many long conversations
+about readmes and node.
+
+Thanks to @substack for writing so many consistently great readmes.
+
+Big thanks to the monks of the Perl community for doing so much of the work of
+figuring out great READMEs over a decade ago. (TODO: links)
+
 ## license
 
 ISC
+
+[zwei/standard-readme]: https://github.com/zwei/standard-readme
+[richardlitt/standard-readme]: https://github.com/richardlitt/standard-readme
