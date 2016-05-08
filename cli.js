@@ -30,13 +30,28 @@ if (!repo) {
 }
 var repoCamel = camel(repo)
 
+// example.js
+var example = getExampleJs()
+function getExampleJs () {
+  try {
+    return fs.readFileSync(path.join(__dirname, 'example.js'))
+  } catch (e) {
+    return "var $$$rePo = require('$$$REPO')\n\nconsole.log('hello warld')"
+  }
+}
+
 // read the template and regex match templated vars
 fs.readFileSync(path.join(__dirname, 'template.md')).toString().split('\n')
   .forEach(function (line) {
-    line = line.replace(/\$\$REPO/, repo)
-    line = line.replace(/\$\$rePo/, repoCamel)
-    line = line.replace(/\$\$1LINER/, oneliner)
-    line = line.replace(/\$\$ZEE_LICENSE/, license)
-    line = line.replace(/\$\$r/, repo.charAt(0).toLowerCase())
-    console.log(line)
+    console.log(processLine(line))
   })
+
+function processLine (line) {
+  line = line.replace(/\$\$EXAMPLE/, example)
+  line = line.replace(/\$\$REPO/, repo)
+  line = line.replace(/\$\$rePo/, repoCamel)
+  line = line.replace(/\$\$1LINER/, oneliner)
+  line = line.replace(/\$\$ZEE_LICENSE/, license)
+  line = line.replace(/\$\$r/, repo.charAt(0).toLowerCase())
+  return line
+}

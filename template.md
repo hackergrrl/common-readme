@@ -11,9 +11,7 @@ background details relevant to understanding what this module does
 Let's do X:
 
 ```js
-var $$rePo = require('$$REPO')
-
-console.log('hello warld')
+$$EXAMPLE
 ```
 
 This will output
