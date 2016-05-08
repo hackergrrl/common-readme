@@ -1,6 +1,35 @@
-# common-readme
+<h1 align="center">common readme</h1>
 
-> generate and lint a great readme for nodejs
+Tired of inventing or freestyling your readme format every time you write it?
+Uninterested in manging your own ad-hoc readme generator?
+
+Let's have a common format. A *common readme* for Node.
+
+This isn't a crazy new idea. Many other ecosystems have been benefiting
+from a common readme format for years, like [CPAN][], ---, ---, and ---.
+
+Common README saves you and others time in N ways:
+
+- **No configuration.** The easiest way to enforce consistent style in your project. Just
+  drop it in.
+- **Catch style errors before they're submitted in PRs.** Saves precious code review time
+  by eliminating back-and-forth between maintainer and contributor.
+
+## Goals
+
+- have reasonable defaults (package.json as source of truth)
+- push as few bikesheds on people as possible, but not prevent them from being
+  added
+- as little buy-in as possible: no other tools or formats required for
+  generation or upkeep; generate once and write vanilla markdown
+- for the parts that I don't have a "best" answer for (e.g. api formatting)
+  common-readme doesn't make any assumptions or enforce anything -- better to
+  assume nothing when you're uncertain than enforce a guess!
+
+## Bias
+
+- designed with small modules in mind
+
 
 ## Why do this?
 
@@ -11,6 +40,10 @@
    can focus on the content instead of the structure
 
 3. tl;dr  feelings *and* efficiency
+
+## prior art
+
+http://www.perlmonks.org/?node_id=431702#start_your_module
 
 ## But what's wrong with READMEs today?
 
@@ -81,6 +114,30 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
    quickly if it has an incompatible license to your work. I generally stick to
    the MIT/BSD/X11/ISC flavours. if you have a non-permissive license, stick it
    at the very top of the module to prevent any confusion
+
+from `perlmodstyle`:
+> The level of detail in Perl module documentation generally goes from
+> less detailed to more detailed.  Your SYNOPSIS section should
+> contain a minimal example of use (perhaps as little as one line of
+> code; skip the unusual use cases or anything not needed by most
+> users); the DESCRIPTION should describe your module in broad terms,
+> generally in just a few paragraphs; more detail of the module's
+> routines or methods, lengthy code examples, or other in-depth
+> material should be given in subsequent sections.
+>
+> Ideally, someone who's slightly familiar with your module should be
+> able to refresh their memory without hitting "page down".  As your
+> reader continues through the document, they should receive a
+> progressively greater amount of knowledge.
+
+from http://mathforum.org/ken/perl_modules.html#document:
+> Your documentation is complete when someone can use your module without ever
+> having to look at its code. This is very important. This makes it possible for
+> you to separate your module's documented interface from its internal
+> implementation (guts). This is good because it means that you are free to
+> change the module's internals as long as the interface remains the same.
+>
+> Remember: the documentation, not the code, defines what a module does.
 
 ### what other good practices are there?
 
