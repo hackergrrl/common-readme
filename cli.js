@@ -4,36 +4,33 @@ var spawn = require('child_process').spawn
 var fs = require('fs')
 var path = require('path')
 var camel = require('camelcase')
-
 var args = require('minimist')(process.argv)
 
-var repo
-var oneliner = 'one-liner description of the module'
+var pkg = require('./package.json') || {}
 
-var pkg = require('./package.json')
-if (pkg && pkg.name) {
-  repo = pkg.name
-  oneliner = pkg.description
-}
+// one liner
+var oneliner = pkg.description || 'one-liner description of the module'
 
+// license
 var license = args.l || args.license || pkg.license || null
-
 if (!license) {
   console.error('no license set or found in package.json!')
+  console.error()
+  console.log('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
   process.exit(1)
 }
 
-if (process.argv.length === 3) {
-  repo = process.argv[2]
+// repo name
+var repo = args.r || args.repo || pkg.repo || null
+if (!repo) {
+  console.error('no repo name set or found in package.json!')
+  console.error()
+  console.error('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
+  process.exit(1)
 }
-
-if (!repo && process.argv.length !== 3) {
-  console.log('USAGE: generate-readme [REPO-NAME] [-l|--license LICENSE]')
-  process.exit(0)
-}
-
 var repoCamel = camel(repo)
 
+// read the template and regex match templated vars
 fs.readFileSync(path.join(__dirname, 'template.md')).toString().split('\n')
   .forEach(function (line) {
     line = line.replace(/\$\$REPO/, repo)
