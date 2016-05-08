@@ -9,12 +9,18 @@ var args = require('minimist')(process.argv)
 
 var repo
 var oneliner = 'one-liner description of the module'
-var license = args.l || args.license || 'ISC'
 
 var pkg = require('./package.json')
 if (pkg && pkg.name) {
   repo = pkg.name
   oneliner = pkg.description
+}
+
+var license = args.l || args.license || pkg.license || null
+
+if (!license) {
+  console.error('no license set or found in package.json!')
+  process.exit(1)
 }
 
 if (process.argv.length === 3) {
