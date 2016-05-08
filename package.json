@@ -11,5 +11,6 @@
   "dependencies": {
     "camelcase": "^3.0.0",
     "minimist": "^1.2.0"
-  }
+  },
+  "license": "ISC"
 }
