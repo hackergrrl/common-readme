@@ -58,6 +58,14 @@ With [npm](https://npmjs.org/) installed, run
 $ npm install $$REPO
 ```
 
+## Acknowledgments
+
+$$REPO was greatly inspired by ...
+
+## See Also
+
+[noffle/common-readme](https://github.com/noffle/common-readme), ...
+
 ## License
 
 $$ZEE_LICENSE
