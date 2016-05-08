@@ -1,6 +1,6 @@
-# REPO
+# $$REPO
 
-> 1LINER
+> $$1LINER
 
 ## Background
 
@@ -11,7 +11,7 @@ background details relevant to understanding what this module does
 Let's do X:
 
 ```js
-var rePo = require('REPO')
+var $$rePo = require('$$REPO')
 
 ```
 
@@ -23,41 +23,41 @@ This will output
 ## API
 
 ```js
-var rePo = require('REPO')
+var $$rePo = require('$$REPO')
 ```
 
-### var repo = rePo(name, opts={})
+### var $$r = $$rePo(name, opts={})
 
-Produces a new repo with name `name`. Valid `opts` keys include
+Produces a new $$REPO with name `name`. Valid `opts` keys include
 
 - `db` (required) - uses the levelup instance `db`
 - `count` (optional) - does the thing `count` times
 
-### repo.work(hard, cb(err, res))
+### $$r.work(hard, cb(err, res))
 
-Puts `repo` to work. If `hard` is `true`, it'll even work pretty hard at it.
-`cb` will be called with the result of the work.
+Puts `$$r` to work. If `hard` is `true`, it'll even work pretty hard at it. `cb`
+will be called with the result of the work.
 
-### repo.pipe(stream)
+### $$r.pipe(stream)
 
-REPO implements a readable stream
+$$r implements a readable stream
 
-### stream.pipe(repo)
+### stream.pipe($$r)
 
-REPO implements a writeable stream
+$$r implements a writeable stream
 
-### repo.on('foo', cb(bar))
+### $$r.on('foo', cb(bar))
 
-`repo` can raise an event named `'foo'` with the argument `bar`.
+`$$r` can raise an event named `'foo'` with the argument `bar`.
 
 ## Install
 
 With [npm](https://npmjs.org/) installed, run
 
 ```
-$ npm install REPO
+$ npm install $$REPO
 ```
 
 ## License
 
-ZEE_LICENSE
+$$ZEE_LICENSE
