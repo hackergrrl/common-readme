@@ -1,5 +1,5 @@
 <h4 align="center">
-  ![common readme](http://tmp.stephenwhitmore.com/common-readme.png)
+  <img src="http://tmp.stephenwhitmore.com/common-readme.png">
 </h4>
 <br>
 
