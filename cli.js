@@ -21,7 +21,7 @@ if (!license) {
 }
 
 // repo name
-var repo = args.r || args.repo || pkg.repo || null
+var repo = args.r || args.repo || pkg.name || null
 if (!repo) {
   console.error('no repo name set or found in package.json!')
   console.error()
