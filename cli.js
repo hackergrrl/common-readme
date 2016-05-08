@@ -6,6 +6,18 @@ var path = require('path')
 var camel = require('camelcase')
 var args = require('minimist')(process.argv)
 
+if (args.h || args.help) {
+  usage()
+  console.error()
+  console.error('Generate a readme for your node module.')
+  process.exit(1)
+}
+
+function usage () {
+  console.error()
+  console.log('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
+}
+
 var pkg = require('./package.json') || {}
 
 // one liner
@@ -15,8 +27,7 @@ var oneliner = pkg.description || 'one-liner description of the module'
 var license = args.l || args.license || pkg.license || null
 if (!license) {
   console.error('no license set or found in package.json!')
-  console.error()
-  console.log('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
+  usage()
   process.exit(1)
 }
 
@@ -24,8 +35,7 @@ if (!license) {
 var repo = args.r || args.repo || pkg.name || null
 if (!repo) {
   console.error('no repo name set or found in package.json!')
-  console.error()
-  console.error('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
+  usage()
   process.exit(1)
 }
 var repoCamel = camel(repo)
