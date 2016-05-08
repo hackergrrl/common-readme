@@ -113,7 +113,8 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
 7. don't be shy about using diagrams. if actual drawing isn't your forte, there
    are many [ascii diagram programs][]
 
-8. avoid [badges][] where ever possible. they add noise to your readme, and
+8. avoid [badges][] where ever possible -- or don't. they are a bikeshed; avoid
+   falling into pointless debate on them. they add noise to your readme, and
    generally only function if the user reading your markdown is online. for each
    badge, consider: "what real value is this badge providing to the typical
    viewer of this readme"? have a CI badge to show build/test status? this
@@ -175,19 +176,30 @@ to be able to execute the `common-readme` command.
 
 ## Acknowledgments
 
-common-readme was greatly inspired by the ideas brewing in
-`zwei/standard-readme` and `richardlitt/standard-readme`, as well as the radical
-honey-badger-esque standardization of `feross/standard`.
+A standard readme format for the Node community isn't a new idea. Inspiration
+came from many conversations and standard-readme efforts in the community:
 
-Thanks to @mafintosh and @feross and @andrewosh for many long conversations
-about readmes and node.
+ - https://github.com/feross/standard/issues/141
+ - [richardlitt/standard-readme](https://github.com/RichardLitt/readme-standard)
+ - [zwei/standard-readme](https://github.com/zcei/standard-readme)
 
-Thanks to @substack for writing so many consistently great readmes.
+Inspiration was drawn from the honey-badger-esque standardization of
+[feross/standard](https://github.com/feross/standard).
 
-Big thanks to the monks of the Perl community for doing so much of the work of
-figuring out great READMEs over a decade ago. (TODO: links)
+Thanks to @mafintosh, @andrewosh, and @feross for many long conversations about
+readmes and Node.
 
-## license
+I also did a great deal of Perl archeaology -- it turns out the monks of the
+Perl community already did much of the hard work of [figuring out great
+READMEs](http://perldoc.perl.org/perlmodstyle.html) and the wisdom around small
+module development well over a decade ago.
+
+## See Also
+
+READMEs work great with the [`readme`](https://www.npmjs.com/package/readme)
+program!
+
+## License
 
 ISC
 
