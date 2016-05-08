@@ -1,38 +1,60 @@
-<h1 align="center">
-  <font color="#f3f3f3">Α</font>
-  *common readme*
-  <font color="#f3f3f3">Ω</font>
-</h1>
+<center>
+  ![common readme](http://tmp.stephenwhitmore.com/common-readme.png)
+</center>
+<br>
 
-<h4>*Module authors!*</h4> Tired of inventing your readme format every time you write it?
-Have your own ad-hoc readme generator but uninterested in maintaining it?
+#### *Module consumers!*
 
-<h4>*Module consumers!*</h4> Love how each module seems to have its own made up README,
-and how each module you visit has chosen something different? Maybe they've
-chosen to omit important sections like `API` or `Usage` entirely?
+Frustrated by each module having its own ad-hoc README format--each wildly
+different from the last? Annoyed by modules that have chosen to omit important
+sections like `API` or `Usage` altogether?
 
-What if there was a common format for producers and consumers of modules? A
-*common readme* for Node.
+#### *Module authors!*
 
-common-readme saves module writers and module searchers time in 4 ways:
+Tired of inventing your readme format every time you write a module? Have your
+own hacked together generator but don't want to maintain it?
 
-- **No buy-in.** No technical locking in to other formats or tooling; run
-  `common-readme` once and operate on vanilla markdown.
+---
+
+What if there was a common format for the benefit of both producers and
+consumers of modules? A *common readme* for node.
+
+common readme saves everybody time by adhering to 5 principles:
+
+- **No buy-in.** No technical lock-in to other formats or tooling; run
+  `common-readme` once for vanilla markdown. Your readme will continue to
+  function fine if you never use common readme again.
 - **Cognitive funnelling.** A good README starts with its most general
-  information at the top -- like its name and usage -- and, as the reader
+  information at the top -- like its description and usage -- and, as the reader
   continues to be interested, narrows down to specific details -- like API and
   concrete installation instructions. This makes it quick to "short circuit" and
   abandon a prospective module early without delving too deeply into its
   innards.
+- **Treat package.json as truth.** Pull as many details out of `package.json` --
+  like name, description, and license -- as possible. No configuration.
 - **Dodge [bikesheds](https://en.wikipedia.org/wiki/Law_of_triviality).** Impose
   informed opinion, but don't push personal views that preclude others from
   having theirs.
-- **package.json is truth.** Pull as many details out of `package.json` -- like
-  name, description, and license -- as possible.
-- **Consistent.** Your brain can scan a README much faster when it can learn to
-  anticipate its structure.
+- **Be consistent.** Your brain can scan a README much faster when it can learn
+  to anticipate its structure.
 
-## But why!?
+## Usage
+
+With [npm](https://npmjs.org/) installed, run
+
+    $ npm install -g common-readme
+
+The `common-readme` command writes a brand new README to standard out. You can
+direct this to `README.md` and use it as a basis for your new module after
+setting up your `package.json`:
+
+    $ common-readme > README.md
+
+Behold! A brand new, shiny README, reading to be impressed upon with your
+brilliant ideas! It will automatically be populated with values from
+`package.json`, such as `name`, `description`, and `license`.
+
+## Why?
 
 This actually isn't a crazy new idea. Many other ecosystems have been benefiting
 from a common readme format for years, like Perl and
@@ -52,17 +74,6 @@ from a common readme format for years, like Perl and
 4. Examining modules for project inclusion is a part of every node developer's
    regular cycle. Having a consistent format helps the brain focus on content
    instead of structure.
-
-## Usage
-
-The `common-readme` command writes a brand new README to standard out. You can
-direct this to `README.md` and use it as a basis for your new module after
-setting up your `package.json`:
-
-    $ common-readme > README.md
-
-It will automatically be populated with values from `package.json`, such as
-`name`, `description`, and `license`.
 
 ## Install
 
