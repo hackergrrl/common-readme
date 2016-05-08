@@ -1,6 +1,6 @@
-<center>
+<h4 align="center">
   ![common readme](http://tmp.stephenwhitmore.com/common-readme.png)
-</center>
+</h4>
 <br>
 
 #### *Module consumers!*
