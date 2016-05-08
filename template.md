@@ -13,11 +13,13 @@ Let's do X:
 ```js
 var $$rePo = require('$$REPO')
 
+console.log('hello warld')
 ```
 
 This will output
 
 ```
+hello warld
 ```
 
 ## API
