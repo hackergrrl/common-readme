@@ -62,23 +62,24 @@ be created for everything else (Usage, API, etc), ready for you to fill in.
 
 ## Why?
 
-This isn't a crazy new idea. Many other ecosystems have been benefiting from a
-common readme format for years, like [Perl and
-CPAN](http://perldoc.perl.org/perlmodstyle.html).
+This isn't a crazy new idea. Other ecosystems like [Perl's
+CPAN](http://perldoc.perl.org/perlmodstyle.html) have been benefiting from a
+common readme format for years. Furthermore:
 
-1. The node community is powered by 1) people, and 2) their modules. So long as
-   (1) is *humans* then communication -- not code -- is our most powerful tool
-   for connecting us together.
+1. The node community is powered by us people and the modules we share. It's our
+   documentation that links us together. Our README is the first thing
+   developers see and it should be maximally effective at communicating its
+   purpose and function.
 
 2. There is much wisdom to be found from the many developers who have written
-   many many modules. It would be swell to distill that experience into a common
-   format that stands to benefit us all.
+   many many modules. Common readme aims to distill that experience into a
+   common format that stands to benefit us all; especially newer developers!
 
-3. It'd be great as a module writer to save time writing up the same boilerplate
-   that every README is going to need.
+3. Writing the same boilerplate is a waste of every author's time -- we might as
+   well generate the common pieces and let the author focus on the content.
 
-4. Examining modules for project inclusion is a part of every node developer's
-   regular cycle. Having a consistent format helps the brain focus on content
+4. Scanning through modules on npm is a part of every node developer's regular
+   development cycle. Having a consistent format lets the brain focus on content
    instead of structure.
 
 ## Install
