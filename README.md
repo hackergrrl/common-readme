@@ -3,21 +3,17 @@
 </h4>
 <br>
 
-#### *Module consumers!*
+*Module consumers!* Frustrated by each module having its own ad-hoc README
+format? How each is wildly different from the last? Annoyed by modules that have
+chosen to omit important sections like `API` or `Usage` altogether?
 
-Frustrated by each module having its own ad-hoc README format--each wildly
-different from the last? Annoyed by modules that have chosen to omit important
-sections like `API` or `Usage` altogether?
-
-#### *Module authors!*
-
-Tired of inventing your readme format every time you write a module? Have your
-own hacked together generator but don't want to maintain it?
+*Module authors!* Tired of make up your readme format every time you write one?
+Have your own hacked together generation script but don't want to maintain it?
 
 ---
 
 What if there was a common format for the benefit of both producers and
-consumers of modules? A *common readme* for node.
+consumers of modules? A *common readme* for node modules.
 
 common readme saves everybody time by adhering to 5 principles:
 
@@ -40,6 +36,8 @@ common readme saves everybody time by adhering to 5 principles:
 
 ## Usage
 
+See a README generated with `common-readme`!
+
 With [npm](https://npmjs.org/) installed, run
 
     $ npm install -g common-readme
@@ -56,9 +54,9 @@ brilliant ideas! It will automatically be populated with values from
 
 ## Why?
 
-This actually isn't a crazy new idea. Many other ecosystems have been benefiting
-from a common readme format for years, like Perl and
-[CPAN](http://perldoc.perl.org/perlmodstyle.html).
+This isn't a crazy new idea. Many other ecosystems have been benefiting from a
+common readme format for years, like [Perl and
+CPAN](http://perldoc.perl.org/perlmodstyle.html).
 
 1. The node community is powered by 1) people, and 2) their modules. So long as
    (1) is *humans* then communication -- not code -- is our most powerful tool
@@ -88,20 +86,19 @@ You can now execute the `common-readme` command.
 ## Acknowledgments
 
 A standard readme format for the Node community isn't a new idea. Inspiration
-came from many conversations and standard-readme efforts in the community:
+came from many conversations and unrealized efforts in the community:
 
  - https://github.com/feross/standard/issues/141
  - [richardlitt/standard-readme](https://github.com/RichardLitt/readme-standard)
  - [zwei/standard-readme](https://github.com/zcei/standard-readme)
 
-as well as my own experiences evaluating hundreds of node modules by their
-READMEs.
+This, in addition to my own experiences evaluating hundreds of node modules and
+their READMEs.
 
-The brave audacity of making a claim as grandious as being **the** common readme
-for a whole community was drawn from the honey-don't-care efforts of
+I was partly inspired by the audacity of the honey-badger-don't-care efforts of
 [feross/standard](https://github.com/feross/standard).
 
-I also did a great deal of Perl archeaology -- it turns out the monks of the
+I also did a great deal of Perl archaeology -- it turns out the monks of the
 Perl community already did much of the hard work of [figuring out great
 READMEs](http://perldoc.perl.org/perlmodstyle.html) and the wisdom around small
 module development well over a decade ago.
