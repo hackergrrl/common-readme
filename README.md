@@ -3,12 +3,12 @@
 </h4>
 <br>
 
-*Module consumers!* Frustrated by each module having its own ad-hoc README
+<b>*Module consumers!*</b> Frustrated by each module having its own ad-hoc README
 format? How each is wildly different from the last? Annoyed by modules that have
 chosen to omit important sections like `API` or `Usage` altogether?
 
-*Module authors!* Tired of make up your readme format every time you write one?
-Have your own hacked together generation script but don't want to maintain it?
+<b>*Module authors!*</b> Tired of making up your readme format every time you
+write one? Have your own hacky generation script but don't want to maintain it?
 
 ---
 
