@@ -40,15 +40,17 @@ With [npm](https://npmjs.org/) installed, run
 
     $ npm install -g common-readme
 
-`common-readme` is a command line program. When run, a brand new README is
-generated and written to your terminal. You can redirect this to `README.md` and
-use it as a basis for your new module after setting up your `package.json`:
+`common-readme` is a command line program. You run it when you've started a new
+module that has a `package.json` set up.
+
+When run, a brand new README is generated and written to your terminal. You can
+redirect this to `README.md` and use it as a basis for your new module.
 
     $ common-readme > README.md
 
-A brand new readme will be created; automatically populated with values from
+This brand new readme will be automatically populated with values from
 `package.json` such as `name`, `description`, and `license`. Stub sections will
-be created for everything else.
+be created for everything else (Usage, API, etc), ready for you to fill in.
 
 ## Why?
 
