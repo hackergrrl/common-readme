@@ -3,36 +3,34 @@
 </h4>
 <br>
 
-<b>*Module consumers!*</b> Frustrated by each module having its own ad-hoc README
-format? How each is wildly different from the last? Annoyed by modules that have
-chosen to omit important sections like `API` or `Usage` altogether?
+<b>*Module consumers!*</b> Frustrated by each module having its own wildly
+unique README format? Annoyed by modules that omit critical sections like
+**API** or **Examples**? Stuck scrolling through API docs before you *even know
+what the module does*?
 
 <b>*Module authors!*</b> Tired of making up your readme format every time you
-write one? Have your own hacky generation script but don't want to maintain it?
+write it? Do you just want consistent readmes pre-populated with your module's
+name, description and license without worrying about the structure every time?
 
 ---
 
-What if there was a common format for the benefit of both producers and
-consumers of modules? A *common readme* for node modules.
+What if there was a common format for the benefit of producers and consumers?
 
-common readme saves everybody time by adhering to 5 principles:
+A *common readme* for node modules.
 
-- **No buy-in.** No technical lock-in to other formats or tooling; run
-  `common-readme` once for vanilla markdown. Your readme will continue to
-  function fine if you never use common readme again.
-- **Cognitive funnelling.** A good README starts with its most general
-  information at the top -- like its description and usage -- and, as the reader
-  continues to be interested, narrows down to specific details -- like API and
-  concrete installation instructions. This makes it quick to "short circuit" and
-  abandon a prospective module early without delving too deeply into its
-  innards.
-- **Treat package.json as truth.** Pull as many details out of `package.json` --
-  like name, description, and license -- as possible. No configuration.
-- **Dodge [bikesheds](https://en.wikipedia.org/wiki/Law_of_triviality).** Impose
-  informed opinion, but don't push personal views that preclude others from
-  having theirs.
-- **Be consistent.** Your brain can scan a README much faster when it can learn
-  to anticipate its structure.
+This can save everybody time by adhering to 4 principles:
+
+1. **No lock in.** No special formats or tooling; run `common-readme` once for
+   pure vanilla markdown.
+2. **No surprises.** Pull as many details out of `package.json` -- like name,
+   description, and license -- as possible. No time wasted on configuration.
+3. **Cognitive funnelling.** Start with the most general information at the top
+   (Name, Description, Examples) and if the reader maintains interest, narrow
+   down to specifics (API, Installation). This makes it easy for readers to
+   "short circuit" and continue the hunt for the right module elsewhere without
+   wasting time delving into unnecessary details.
+4. **Be consistent.** Your brain can scan a document much faster when it can
+   anticipate its structure.
 
 ## Usage
 
@@ -42,15 +40,15 @@ With [npm](https://npmjs.org/) installed, run
 
     $ npm install -g common-readme
 
-The `common-readme` command writes a brand new README to standard out. You can
-direct this to `README.md` and use it as a basis for your new module after
-setting up your `package.json`:
+`common-readme` is a command line program. When run, a brand new README is
+generated and written to your terminal. You can redirect this to `README.md` and
+use it as a basis for your new module after setting up your `package.json`:
 
     $ common-readme > README.md
 
-Behold! A brand new, shiny README, reading to be impressed upon with your
-brilliant ideas! It will automatically be populated with values from
-`package.json`, such as `name`, `description`, and `license`.
+A brand new readme will be created; automatically populated with values from
+`package.json` such as `name`, `description`, and `license`. Stub sections will
+be created for everything else.
 
 ## Why?
 
