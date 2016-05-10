@@ -60,11 +60,11 @@ $ npm install $$REPO
 
 ## Acknowledgments
 
-$$REPO was greatly inspired by ...
+$$REPO was inspired by ...
 
 ## See Also
 
-[noffle/common-readme](https://github.com/noffle/common-readme), ...
+- [`noffle/common-readme`](https://github.com/noffle/common-readme)
 
 ## License
 
