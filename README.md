@@ -32,9 +32,17 @@ This can save everybody time by adhering to 4 principles:
 4. **Be consistent.** Your brain can scan a document much faster when it can
    anticipate its structure.
 
-## Usage
+## Examples
 
-See a README generated with `common-readme`!
+Some READMEs generated using common readme:
+
+- [`goertzel`](https://github.com/noffle/goertzel)
+- [`twitter-kv`](https://github.com/noffle/twitter-kv)
+
+*([Create a PR](https://github.com/noffle/common-readme/pulls) to add yours
+here!)*
+
+## Usage
 
 With [npm](https://npmjs.org/) installed, run
 
@@ -96,7 +104,7 @@ This, in addition to my own experiences evaluating hundreds of node modules and
 their READMEs.
 
 I was partly inspired by the audacity of the honey-badger-don't-care efforts of
-[feross/standard](https://github.com/feross/standard).
+[standard](https://github.com/feross/standard).
 
 I also did a great deal of Perl archaeology -- it turns out the monks of the
 Perl community already did much of the hard work of [figuring out great
