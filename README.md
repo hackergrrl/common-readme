@@ -29,7 +29,7 @@ This can save everybody time by adhering to 4 principles:
    down to specifics (API, Installation). This makes it easy for readers to
    "short circuit" and continue the hunt for the right module elsewhere without
    wasting time delving into unnecessary details.
-4. **Be consistent.** Your brain can scan a document much faster when it can
+4. **Consistency.** Your brain can scan a document much faster when it can
    anticipate its structure.
 
 ## Examples
