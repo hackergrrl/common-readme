@@ -18,7 +18,7 @@ function usage () {
   console.log('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
 }
 
-var pkg = require('./package.json') || {}
+var pkg = require(path.join(process.cwd(), 'package.json')) || {}
 
 // one liner
 var oneliner = pkg.description || 'one-liner description of the module'
