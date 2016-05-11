@@ -119,6 +119,8 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
    e. aggressively linkify specialized terminology! in markdown you can keep
    [footnotes][] at the bottom of your document, so referring to them several
    times throughout becomes cheap
+   f. some of my personal preferences on api formatting can be found
+   [here](api_formatting.md)
 
 10. if your module is a small collection of stateless functions, having a
     **Usage** section as a a node REPL session of function calls and results can

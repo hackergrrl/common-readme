@@ -82,10 +82,10 @@ common readme format for years. Furthermore:
    development cycle. Having a consistent format lets the brain focus on content
    instead of structure.
 
-## Writing a Good README
+## Writing a Great README
 
-You can find further guidelines and advice on writing excellent READMEs in the
-brief essay, [*the art of readme*](art_of_readme.md).
+You can find further guidelines and advice on writing READMEs in
+[readme_tips.md](readme_tips.md).
 
 ## Install
 
