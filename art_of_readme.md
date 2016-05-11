@@ -154,4 +154,3 @@ from http://mathforum.org/ken/perl_modules.html#document:
 > change the module's internals as long as the interface remains the same.
 >
 > Remember: the documentation, not the code, defines what a module does.
-
