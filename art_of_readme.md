@@ -1,4 +1,4 @@
-# writing a good readme
+# the art of readme
 
 ## node IS its modules
 

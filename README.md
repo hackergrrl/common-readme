@@ -82,6 +82,11 @@ common readme format for years. Furthermore:
    development cycle. Having a consistent format lets the brain focus on content
    instead of structure.
 
+## Writing a Good README
+
+You can find further guidelines and advice on writing excellent READMEs in the
+brief essay, [*the art of readme*](art_of_readme.md).
+
 ## Install
 
 With [npm](https://npmjs.org/) installed, run
