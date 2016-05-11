@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="http://tmp.stephenwhitmore.com/common-readme.png">
+  <img src="common-readme.png">
 </h4>
 <br>
 
