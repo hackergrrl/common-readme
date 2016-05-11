@@ -24,7 +24,7 @@ it matches the developer's needs. this becomes essentially a series of pattern
 matching problems to solve, where each step takes me deeper into the module and
 its details:
 
-1. *Name* -- ideally the module name is self-evident. `sorted-array` sounds
+1. *Name* -- ideally the module name is self-evident. [`sorted-array`]() sounds
    promising if I'm looking for an array that maintains a sort order on itself.
    if the name sounds too vague or unrelated, I can move on.
 
@@ -66,31 +66,7 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
    the MIT/BSD/X11/ISC flavours. if you have a non-permissive license, stick it
    at the very top of the module to prevent any confusion
 
-from `perlmodstyle`:
-> The level of detail in Perl module documentation generally goes from
-> less detailed to more detailed.  Your SYNOPSIS section should
-> contain a minimal example of use (perhaps as little as one line of
-> code; skip the unusual use cases or anything not needed by most
-> users); the DESCRIPTION should describe your module in broad terms,
-> generally in just a few paragraphs; more detail of the module's
-> routines or methods, lengthy code examples, or other in-depth
-> material should be given in subsequent sections.
->
-> Ideally, someone who's slightly familiar with your module should be
-> able to refresh their memory without hitting "page down".  As your
-> reader continues through the document, they should receive a
-> progressively greater amount of knowledge.
-
-from http://mathforum.org/ken/perl_modules.html#document:
-> Your documentation is complete when someone can use your module without ever
-> having to look at its code. This is very important. This makes it possible for
-> you to separate your module's documented interface from its internal
-> implementation (guts). This is good because it means that you are free to
-> change the module's internals as long as the interface remains the same.
->
-> Remember: the documentation, not the code, defines what a module does.
-
-# what other good practices are there?
+## what other good practices are there?
 
 1. include a **background** section if your module depends on important
    abstractions or ecosystems that it exposes. [`hyper-array`][] provides an
@@ -152,3 +128,30 @@ from http://mathforum.org/ken/perl_modules.html#document:
     addition to) a programmatic API, show usage examples as command invocations
     and their output. if you create or modify a file, `cat` it to demonstrate
     the change before and after
+
+## some further wisdom from the perl community
+
+from `perlmodstyle`:
+> The level of detail in Perl module documentation generally goes from
+> less detailed to more detailed.  Your SYNOPSIS section should
+> contain a minimal example of use (perhaps as little as one line of
+> code; skip the unusual use cases or anything not needed by most
+> users); the DESCRIPTION should describe your module in broad terms,
+> generally in just a few paragraphs; more detail of the module's
+> routines or methods, lengthy code examples, or other in-depth
+> material should be given in subsequent sections.
+>
+> Ideally, someone who's slightly familiar with your module should be
+> able to refresh their memory without hitting "page down".  As your
+> reader continues through the document, they should receive a
+> progressively greater amount of knowledge.
+
+from http://mathforum.org/ken/perl_modules.html#document:
+> Your documentation is complete when someone can use your module without ever
+> having to look at its code. This is very important. This makes it possible for
+> you to separate your module's documented interface from its internal
+> implementation (guts). This is good because it means that you are free to
+> change the module's internals as long as the interface remains the same.
+>
+> Remember: the documentation, not the code, defines what a module does.
+
