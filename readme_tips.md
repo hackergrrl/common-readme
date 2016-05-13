@@ -3,14 +3,15 @@
 ## node IS its modules
 
 the node ecosystem thrives on and is powered by its modules -- the vast majority
-of which are hosted on [npm][]. in the course of a week, node developers
-evaluate potentially dozens of modules for inclusion in their projects. however,
-the quality bar across modules varies wildly. as a result, developers must
-gradually build up a personal heuristic for quickly identifying quality modules.
+of which are hosted on [npm](https://npmjs.org). in the course of a week, node
+developers evaluate potentially dozens of modules for inclusion in their
+projects. however, the quality bar across modules varies wildly. as a result,
+developers must gradually build up a personal heuristic for quickly identifying
+quality modules.
 
-[substack][] has written about this, and this idea also spurred the creation of
-[node-modules][], a npm search replacement that leverages your github social
-graph.
+[substack](http://substack.net/finding_modules) has written about this, and this
+idea also spurred the creation of [node-modules](http://node-modules.com/), a
+npm search replacement that leverages your github social graph.
 
 ## to write node is to find modules
 
@@ -24,7 +25,8 @@ it matches the developer's needs. this becomes essentially a series of pattern
 matching problems to solve, where each step takes me deeper into the module and
 its details:
 
-1. *Name* -- ideally the module name is self-evident. [`sorted-array`]() sounds
+1. *Name* -- ideally the module name is self-evident.
+   [`sorted-array`](https://github.com/javascript/sorted-array) sounds
    promising if I'm looking for an array that maintains a sort order on itself.
    if the name sounds too vague or unrelated, I can move on.
 
@@ -40,10 +42,10 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
 
 3. *Usage* -- rather than starting to delve into the API docs, it'd be great to
    see what the module looks like in action. I can quickly determine whether the
-   example JS fits the desired style and problem. People have [lots of
-   opinions][] on things like promises/callbacks and ES6. if it does fit the
-   bill, then I can proceed to greater detail. if it does, then I can proceed to
-   greater detail.
+   example JS fits the desired style and problem. People have lots of opinions
+   on things like promises/callbacks and ES6. if it does fit the bill, then I
+   can proceed to greater detail. if it does, then I can proceed to greater
+   detail.
 
 4. *API* -- the name, description, and usage of this module all sound appealing
    to me. I'm probably very likely to use this module at this point. I just need
@@ -69,10 +71,12 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
 ## what other good practices are there?
 
 1. include a **background** section if your module depends on important
-   abstractions or ecosystems that it exposes. [`hyper-array`][] provides an
-   array data structure over a [`hyperlog`][], so you had better define or link
-   to what the heck a hyperlog is. often the **background** is a great way to
-   explain the module's motivation if similar modules already exist on npm.
+   abstractions or ecosystems that it exposes.
+   [`bisecting-between`](https://github.com/noffle/bisecting-between) is not
+   very obvious in its function by its name, so it has a detailed **background**
+   section to define and link to the big concepts and abstractions one needs to
+   understand to use and grok it. it's also a great way to explain the module's
+   motivation if similar modules already exist on npm.
 
 2. aggressively linkify! if you talk about any other modules or ideas or
    frameworks, you might as well make their name a link so that visitors can
@@ -94,11 +98,9 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
 6. don't be shy about having additional sections in the readme to explain
    concepts in the module that are complicated or have unexpected edge behaviour
 
-7. don't be shy about using diagrams. if actual drawing isn't your forte, there
-   are many [ascii diagram programs][]
-
-8. be extremely judicious in your use of [badges][]. they can be a bikeshed;
-   avoid falling into pointless debate on them. they add visual noise to your
+7. be extremely judicious in your use of badges. they're easy to
+   [overuse](https://github.com/angular/angular). they can be a bikeshed; avoid
+   falling into pointless debate on them. they also add visual noise to your
    readme, and generally only function if the user reading your markdown is
    online, since the images are generally hosted elsewhere. for each badge,
    consider: "what real value is this badge providing to the typical viewer of
@@ -108,26 +110,28 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
    and ask yourself if there's a flow for that data that can better reach its
    intended audience
 
-9. API formatting is highly bikesheddable. Use whatever format you think is most
-   clear, but make sure your format expressing important subtleties:
-   a. which parameters are optional, and their defaults
-   b. mention type information where it is not obvious from convention
-   c. for `opts` object parameters, detail all keys and values that are accepted
-   d. don't shy away from providing a tiny example of an API function's use if
-   their use is not obvious or fully covered in the **Usage** section. however,
-   this can also be a strong signal that the function is too complex and needs
-   to be refactored, broken into smaller functions, or removed altogether
-   e. aggressively linkify specialized terminology! in markdown you can keep
-   [footnotes][] at the bottom of your document, so referring to them several
-   times throughout becomes cheap
-   f. some of my personal preferences on api formatting can be found
+8. API formatting is highly bikesheddable. Use whatever format you think is most
+   clear, but make sure your format expressing important subtleties: a. which
+   parameters are optional, and their defaults b. mention type information where
+   it is not obvious from convention c. for `opts` object parameters, detail all
+   keys and values that are accepted d. don't shy away from providing a tiny
+   example of an API function's use if their use is not obvious or fully covered
+   in the **Usage** section. however, this can also be a strong signal that the
+   function is too complex and needs to be refactored, broken into smaller
+   functions, or removed altogether e. aggressively linkify specialized
+   terminology! in markdown you can keep
+   [footnotes](https://daringfireball.net/projects/markdown/syntax#link) at the
+   bottom of your document, so referring to them several times throughout
+   becomes cheap. some of my personal preferences on api formatting can be found
    [here](api_formatting.md)
 
-10. if your module is a small collection of stateless functions, having a
-    **Usage** section as a a node REPL session of function calls and results can
-    communicate usage more clearly than a JS file to execute
+9. if your module is a small collection of stateless functions, having a
+    **Usage** section as a [node REPL
+    session](https://github.com/noffle/bisecting-between#example) of function
+    calls and results can communicate usage more clearly than a JS file to
+    execute
 
-11. if your module provides a CLI (command line interface) insted of (or in
+10. if your module provides a CLI (command line interface) insted of (or in
     addition to) a programmatic API, show usage examples as command invocations
     and their output. if you create or modify a file, `cat` it to demonstrate
     the change before and after
