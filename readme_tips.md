@@ -108,7 +108,8 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
    better reach important parties by emailing maintainers or automatically
    creating an issue -- always consider the audience of the data in your readme
    and ask yourself if there's a flow for that data that can better reach its
-   intended audience
+   intended audience. (If you absolutely must have a badge, make sure it links
+   to further information)
 
 8. API formatting is highly bikesheddable. Use whatever format you think is most
    clear, but make sure your format expressing important subtleties: a. which
