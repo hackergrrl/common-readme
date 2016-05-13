@@ -97,15 +97,16 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
 7. don't be shy about using diagrams. if actual drawing isn't your forte, there
    are many [ascii diagram programs][]
 
-8. avoid [badges][] where ever possible -- or don't. they are a bikeshed; avoid
-   falling into pointless debate on them. they add noise to your readme, and
-   generally only function if the user reading your markdown is online. for each
-   badge, consider: "what real value is this badge providing to the typical
-   viewer of this readme"? have a CI badge to show build/test status? this
-   signal would better reach important parties by emailing maintainers or
-   automatically creating an issue -- always consider the audience of the data
-   in your readme and ask yourself if there's a flow for that data that can
-   better reach its intended audience
+8. be extremely judicious in your use of [badges][]. they can be a bikeshed;
+   avoid falling into pointless debate on them. they add visual noise to your
+   readme, and generally only function if the user reading your markdown is
+   online, since the images are generally hosted elsewhere. for each badge,
+   consider: "what real value is this badge providing to the typical viewer of
+   this readme"? have a CI badge to show build/test status? this signal would
+   better reach important parties by emailing maintainers or automatically
+   creating an issue -- always consider the audience of the data in your readme
+   and ask yourself if there's a flow for that data that can better reach its
+   intended audience
 
 9. API formatting is highly bikesheddable. Use whatever format you think is most
    clear, but make sure your format expressing important subtleties:
