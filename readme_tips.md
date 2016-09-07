@@ -27,16 +27,16 @@ perspective on the subject from both sides.
 
 ## what's the problem? (a massive pile of good and bad things)
 
-The node ecosystem is powered by its modules. If node was a train, it's npm taht
-arranges them into a string of boxcars, and puts a driving locomotive behind all
-of it.
+The node ecosystem is powered by its modules. Each module is a superpower. If
+node was a train, it's npm taht arranges them into a string of boxcars, and puts
+a driving locomotive behind all of it.
 
-This train runs on schedule at [npm](https://npmjs.org). In the course of a
-week, node developers evaluate potentially dozens of modules for inclusion in
-their projects. This is a great deal of power being churned out in a daily
-basis, ripe for the plucking as fast as you can write `npm install`.
+This train of superpowers runs on schedule at [npm](https://npmjs.org). In the
+course of a week, node developers evaluate potentially dozens of modules for
+inclusion in their projects. This is a great deal of power being churned out in
+a daily basis, ripe for the plucking as fast as you can write `npm install`.
 
-Like any ecosystem that is extremely accessible, the quality bar varies.  npm may
+Like any ecosystem that is extremely accessible, the quality bar varies. npm may
 pack away all of the modules and let them roam the countryside, but each boxcar
 is packed full of tools: some shining and new, others broken and rusty.
 
@@ -332,4 +332,19 @@ maximize its usefulness to others.
 
 11. Don't forget to use `package.json` keywords to direct module hunters to your
     doorstep. (TODO: link to this page on npm)
+
+12. The more you change your API, the more work you need to exert updating
+    documentation -- the implication here is that you should keep your APIs
+    small and concretely defined early on. Requirements change over time, but
+    instead of front-loading assumptions into the APIs of your modules, load
+    them up one level of abstraction: the module set itself. If the requirements
+    *do* change and 'do-one-concrete-thing' no longer makes sense, then simply
+    write a new module that does the thing you need. 'do-one-concrete-thing'
+    remains a valid and valuable module for the npm ecosystem, and your course
+    correction cost you nothing but a simple substitution of one module for
+    another.
+
+13. Your git repository and its README will outlive your repository host and any
+    of the crap you link to, especially images, so inline anything that is
+    essential to grokking the module.
 
