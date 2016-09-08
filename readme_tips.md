@@ -1,11 +1,16 @@
-# the art of readme
+# Art of README
 
-## what's a readme?
+## What is a "README" anyway?
 
-TODO: read up on the etymology of readme and relate it to the content
+The nomenclature of "README" dates back to *at least* the 1970s [and the
+PDP-10](http://pdp-10.trailing-edge.com/decuslib10-04/01/43,50322/read.me.html),
+though it may even extend back to the days of notes placed atop stacks of
+punchcards. The use of all-caps in the name is also functional: UNIX systems
+would sort capitals before lower case letters, conveniently putting the README
+before the rest of the directory's content[1](1).
 
-
-## who
+The intent of the file is clear: information for the user to read before
+proceeding any further into the bowels of the system.
 
 This article is written for module creators, because as a builder of modules,
 your job is to create something that will last.
@@ -25,10 +30,10 @@ Looking at the subject of the README from both angles gives a healthy
 perspective on the subject from both sides.
 
 
-## what's the problem? (a massive pile of good and bad things)
+## A massive pile of *things*: some good, some bad
 
 The node ecosystem is powered by its modules. Each module is a superpower. If
-node was a train, it's npm taht arranges them into a string of boxcars, and puts
+node was a train, it's npm that arranges them into a string of boxcars, and puts
 a driving locomotive behind all of it.
 
 This train of superpowers runs on schedule at [npm](https://npmjs.org). In the
@@ -47,7 +52,7 @@ modules have no documentation -- no README even. Some modules don't have tests.
 Some modules don't even have a maintainer. And without a human readily on hand
 to answer questions and explain what a module does, and no remnants of
 documentation left behind, a module becomes a bizarre alien artifact, unusable
-and incomprehensible by the archeologist-developers of tomorrow.
+and incomprehensible by the archaeologist-developers of tomorrow.
 
 Some modules do have documentation, but once again, the quality bar varies.
 Maybe it's just a one-liner description. Maybe it's just an example. All of
@@ -58,9 +63,9 @@ about keeping the users out of the source code and providing instructions
 sufficient to enjoy the abstraction that your module brings.
 
 Node has a "wide" ecosystem: it's largely made up of a very long list of
-independent modules under no flag but its own. There are [exceptions](lodash),
-but despite these fiefdoms, the do-one-thing-well commoners, in their numbers,
-rule the node kingdom.
+independent modules under no flag but its own. There are
+[exceptions](https://github.com/lodash/lodash), but despite these fiefdoms, the
+do-one-thing-well commoners, in their numbers, rule the node kingdom.
 
 This has a natural consequence: it can be hard to find *quality* modules that do
 what you want.
@@ -70,17 +75,17 @@ discoverability problem is infinitely better than a culture problem, where only
 the privileged few may participate.
 
 
-## a body of solutions
+## A Smorgasboard of Solutions
 
 Node developers have responded to this in different ways.
 
-[Curated lists](https://github.com/sindresorhus/awesome-node) have also
+[Curated lists](https://github.com/sindresorhus/awesome-nodejs) have also
 appeared, by using the wisdom of experienced node developers to highlight
 quality modules amongst different categories.
 
 How about the social graph? This idea spurred the creation of
 [node-modules.com](http://node-modules.com/), a npm search replacement that
-leverages your github social graph to find modules your friends like or have
+leverages your Github social graph to find modules your friends like or have
 made.
 
 Many will gradually build up a personal heuristic for quickly identifying
@@ -89,13 +94,14 @@ hundreds of modules over weeks or months. Others have [written about
 this](http://substack.net/finding_modules) heuristic-building process, and the
 criteria that the brain starts to look for.
 
-No matter your approach, you will still ultimately find yourself on npmjs.org or
-github.com or somewhere else, staring at a README. What then?
+No matter your approach, you will still ultimately find yourself on
+[npmjs.org](https://npmjs.org) or [github.com](https://github.com) or somewhere
+else, staring at a README. What then?
 
 
-## professional module spelunkying
+## Professional Module Spelunkying
 
-### readme
+### The README: Your One-Stop Shop
 
 A README is a module consumer's first (and maybe only) look into your creation.
 The consumer wants a module to fulfill their need, so you need to explain
@@ -103,22 +109,23 @@ exactly what need your module fills, and how effectively it does so.
 
 Your job is to
 
-1. tell them what it is (/w or /wo context)
+1. tell them what it is (with or without context)
 2. tell them what it looks like in action
 3. tell them how they use it
 4. tell them any other relevant details
 
-This is your job, again, because of the width of the ecosystem and its resultant
-varying quality bar. Your README is your external, public-facing measure of
-where your work lies on that quality spectrum.
+This is *your* job, again, because of the width of the ecosystem and its
+resultant varying quality bar. Your README is your external, public-facing
+measure of where your work lies on that quality spectrum.
 
 
-### no readme => abstraction broken
+### No README? No abstraction.
 
-The strongest signal when looking at a module is its README.
+The strongest signal when looking at a module is the presence or absence of a
+README.
 
-The lack of any readme is a powerful red flag, but even a lengthy readme is not
-indicative of there being high quality. The ideal readme is as short as it can
+The lack of any README is a powerful red flag, but even a lengthy README is not
+indicative of there being high quality. The ideal README is as short as it can
 be without being any shorter. Detailed documentation is good -- make a separate
 page for it -- but keep your README succinct.
 
@@ -134,17 +141,17 @@ wisdom on this:
 > Remember: the documentation, not the code, defines what a module does.
 
 
-### key elements
+### Key README Elements
 
-once a readme is located the hypothetical developer must scan it to discern if
-it matches the developer's needs. this becomes essentially a series of pattern
+Once a README is located the hypothetical developer must scan it to discern if
+it matches the developer's needs. This becomes essentially a series of pattern
 matching problems to solve, where each step takes me deeper into the module and
 its details:
 
 1. *Name* -- ideally the module name is self-evident.
-   [`sorted-array`](https://github.com/javascript/sorted-array) sounds
-   promising if I'm looking for an array that maintains a sort order on itself.
-   if the name sounds too vague or unrelated, I can move on.
+   [`sorted-array`](https://github.com/javascript/sorted-array) sounds promising
+   if one is looking for an array that maintains a sort order on itself. If the
+   name sounds too vague or unrelated, one can move on.
 
 2. *One liner* -- having a one-liner that describes the module is useful for
    getting an idea of what the module does in slightly greater detail.
@@ -153,20 +160,20 @@ its details:
 > An implementation of John von Neumann's sorted arrays in JavaScript.
 > Implements insertion sort and binary search for fast insertion and deletion.
 
-a bit wordy, but the second sentence makes it very clear that it does what I
+The second sentence makes it very clear that it does what I
 want. Excellent! Now I need to gauge how well it'd fit into my code.
 
 3. *Usage* -- rather than starting to delve into the API docs, it'd be great to
    see what the module looks like in action. I can quickly determine whether the
    example JS fits the desired style and problem. People have lots of opinions
-   on things like promises/callbacks and ES6. if it does fit the bill, then I
-   can proceed to greater detail. if it does, then I can proceed to greater
+   on things like promises/callbacks and ES6. If it does fit the bill, then I
+   can proceed to greater detail. If it does, then I can proceed to greater
    detail.
 
 4. *API* -- the name, description, and usage of this module all sound appealing
    to me. I'm probably very likely to use this module at this point. I just need
    to scan the actual API to make sure it does exactly what I need and doesn't
-   have any unexpected caveats. The API section oight to detail the module's
+   have any unexpected caveats. The API section ought to detail the module's
    objects and functions, their signatures, return types, callbacks, and events
    in good detail. Types should be included where they aren't obvious. Caveats
    should be made clear.
@@ -181,11 +188,11 @@ want. Excellent! Now I need to gauge how well it'd fit into my code.
 6. *License* -- most modules put this at the very bottom, but this might
    actually be better to have higher up; you're likely to exclude a module VERY
    quickly if it has an incompatible license to your work. I generally stick to
-   the MIT/BSD/X11/ISC flavours. if you have a non-permissive license, stick it
+   the MIT/BSD/X11/ISC flavours. If you have a non-permissive license, stick it
    at the very top of the module to prevent any confusion
 
 
-## cognitive funneling, economy of scale
+## Cognitive Funneling
 
 The ordering of the above was not chosen at random.
 
@@ -197,10 +204,21 @@ benefits from predictable patterns.
 You also start to build out your own personal heuristic for what information you
 want, and what red flags disqualify modules quickly.
 
-Thus, it follows that in a readme it is desirable to have:
+Thus, it follows that in a README it is desirable to have:
 
 1. a predictable format
 2. certain key elements present
+
+You don't need to use *this* format, but try to be consistent to save your users
+precious cognitive cycles.
+
+The ordering presented here is lovingly referred to as "cognitive funneling",
+and can be imagined as a funnel held upright, where the widest end contains the
+broadest more pertinent details, and moving deeper down into the funnel presents
+more specific details that are pertinent for only a reader who is interested
+enough in your work to have reached that deeply in the document. Finally, the
+bottom can be reserved for details that only those intrigued by the deeper
+context of the work (background, credits, biblio, ...)
 
 Once again, the Perl monks have wisdom to share on the subject:
 > The level of detail in Perl module documentation generally goes from
@@ -218,39 +236,24 @@ Once again, the Perl monks have wisdom to share on the subject:
 > progressively greater amount of knowledge. -- from `perlmodstyle`
 
 
-
-## enable short-circuiting, mindest, altruism
+## Care About People's Time
 
 Awesome; the ordering of these key elements should be decided by how quickly
-  they let someone 'short circuit' and bail on your module.
+they let someone 'short circuit' and bail on your module.
 
-But this sounds bleak, doesn't it? Your job, when you're doing it optimally
-altruisticly, isn't to "sell" people on your work. it's to let them evaluate
-what your creation does as objectively as possible, and decide whether it meets
-their needs or not. not to, say, maximize your downloads or userbase.
+This sounds bleak, doesn't it? But think about it: your job, when you're doing
+it with optimal altruism in mind, isn't to "sell" people on your work. It's to
+let them evaluate what your creation does as objectively as possible, and decide
+whether it meets their needs or not. Not to, say, maximize your downloads or
+userbase.
 
 This mindset doesn't appeal to everyone; it requires checking your ego at the
 door and letting the work speak for itself as much as possible. Your only job is
-to describe its promise as succinctly as you can.
-
-You don't need to use *this* format, but try to be consistent to save your users
-precious cognitive cycles.
-
-The ordering presented here is lovingly referred to as "cognitive funneling",
-and can be imagined as a funnel held upright, where the widest end contains the
-broadest more pertinent details, and moving deeper down into the funnel presents
-more specific details that are pertinent for only a reader who is interested
-enough in your work to have reached that deeply in the document. finally, the
-bottom can be reserved for details that only those intrigued by the deeper
-context of the work (background, credits, biblio, ...)
-
-Not coincidentally, this is also the format used by
-[**common-readme**](https://github.com/noffle/common-readme), a set of README
-guidelines and handy command-line generator. If you like what's written here,
-you may save some time writing READMEs with `common-readme`.
+to describe its promise as succinctly as you can, so module spelunkyers can
+either use your work when it's a fit, or move on to something else that does.
 
 
-## bonus section: what other good practices are there?
+## Bonus: what other good practices are there?
 
 Outside of the key points of the article, there are other practices you can
 follow (or not follow) to raise your README's quality bar even further, and
@@ -281,7 +284,7 @@ maximize its usefulness to others.
    function, `num` probably means a `Number`).
 
 5. Include the JS in **Usage** as a file in your repo called `example.js` --
-   it's great to have readme code that users can actually run if they clone the
+   it's great to have README code that users can actually run if they clone the
    repository.
 
 6. Don't be shy about having additional sections in the README to explain
@@ -294,10 +297,10 @@ maximize its usefulness to others.
    README, and generally only function if the user reading your markdown in a
    browser online, since the images are generally hosted elsewhere on the
    internet. For each badge, consider: "what real value is this badge providing
-   to the typical viewer of this readme"? Have a CI badge to show build/test
+   to the typical viewer of this README"? Have a CI badge to show build/test
    status? this signal would better reach important parties by emailing
    maintainers or automatically creating an issue -- always consider the
-   audience of the data in your readme and ask yourself if there's a flow for
+   audience of the data in your README and ask yourself if there's a flow for
    that data that can better reach its intended audience. (If you absolutely
    must have a badge, make sure it's wrapped in a link that points to further
    contextual information.)
@@ -313,10 +316,10 @@ maximize its usefulness to others.
       However, this can also be a strong signal that the function is too complex
       and needs to be refactored, broken into smaller functions, or removed
       altogether
-   e. aggressively linkify specialized terminology! in markdown you can keep
+   e. aggressively linkify specialized terminology! In markdown you can keep
       [footnotes](https://daringfireball.net/projects/markdown/syntax#link) at
       the bottom of your document, so referring to them several times throughout
-      becomes cheap. some of my personal preferences on api formatting can be
+      becomes cheap. Some of my personal preferences on api formatting can be
       found [here](api_formatting.md)
 
 9. If your module is a small collection of stateless functions, having a
@@ -325,13 +328,14 @@ maximize its usefulness to others.
    calls and results might communicate usage more clearly than a source code
    file to run.
 
-10. If your module provides a CLI (command line interface) insted of (or in
+10. If your module provides a CLI (command line interface) instead of (or in
     addition to) a programmatic API, show usage examples as command invocations
     and their output. if you create or modify a file, `cat` it to demonstrate
     the change before and after.
 
-11. Don't forget to use `package.json` keywords to direct module hunters to your
-    doorstep. (TODO: link to this page on npm)
+11. Don't forget to use `package.json`
+    [keywords](https://docs.npmjs.com/files/package.json#keywords) to direct
+    module spelunkers to your doorstep.
 
 12. The more you change your API, the more work you need to exert updating
     documentation -- the implication here is that you should keep your APIs
@@ -344,7 +348,31 @@ maximize its usefulness to others.
     correction cost you nothing but a simple substitution of one module for
     another.
 
-13. Your git repository and its README will outlive your repository host and any
-    of the crap you link to, especially images, so inline anything that is
-    essential to grokking the module.
+13. Finally, please remember that your version control repository and its
+    embedded README will outlive your [repository host](https://github.com) and
+    any of the things you hyperlink to--especially images--so *inline* anything
+    that is essential to future users grokking your work.
+
+
+## Bonus: `common-readme`
+
+Not coincidentally, this is also the format used by
+[**common-readme**](https://github.com/noffle/common-readme), a set of README
+guidelines and handy command-line generator. If you like what's written here,
+you may save some time writing READMEs with `common-readme`. You'll find
+real module examples with this format, too.
+
+
+## Call to Arms!
+
+Go forth, brave module spelunker, and make your work discoverable and useable
+through excellent documentation!
+
+
+## Footnotes
+
+1. See [The Jargon File](http://catb.org/~esr/jargon/html/R/README-file.html).
+   However, most systems today will not sort capitals before all lowercase
+   characters, reducing this convention's usefulness to just the visual
+   strikingness of all-caps.
 
