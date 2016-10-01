@@ -93,9 +93,7 @@ common readme format for years. Furthermore:
 ## Art of README
 
 For even more background, wisdom, and ideas, take a look at the article that
-inspired common-readme:
-
-<center>[*Art of README*](https://github.com/noffle/art-of-readme)</center>
+inspired common-readme: [*Art of README*](https://github.com/noffle/art-of-readme).
 
 ## Install
 
