@@ -32,15 +32,23 @@ This can save everybody time by adhering to 4 principles:
 4. **Consistency.** Your brain can scan a document much faster when it can
    anticipate its structure.
 
-## Examples
+## Common format
 
-Some READMEs generated using common readme:
+common-readme operates on the principle of *cognitive funneling*.
 
+> Ideally, someone who's slightly familiar with your module should be able to
+> refresh their memory without hitting "page down".  As your reader continues
+> through the document, they should receive a progressively greater amount of
+> knowledge. -- `perlmodstyle`
+
+Here are some READMEs generated using common-readme:
+
+- [`collide-2d-aabb-aabb`](https://github.com/noffle/collide-2d-aabb-aabb)
 - [`goertzel`](https://github.com/noffle/goertzel)
 - [`twitter-kv`](https://github.com/noffle/twitter-kv)
 
-*([Create a PR](https://github.com/noffle/common-readme/pulls) to add yours
-here!)*
+*([Submit a pull request](https://github.com/noffle/common-readme/pulls) and add
+yours here!)*
 
 ## Usage
 
