@@ -2,8 +2,6 @@
 
 > $$1LINER
 
-## Background
-
 background details relevant to understanding what this module does
 
 ## Usage
