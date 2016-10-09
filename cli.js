@@ -15,10 +15,18 @@ if (args.h || args.help) {
 
 function usage () {
   console.error()
-  console.log('USAGE: generate-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
+  console.log('USAGE: common-readme [-r|--repo REPO-NAME] [-l|--license LICENSE]')
 }
 
-var pkg = require(path.join(process.cwd(), 'package.json')) || {}
+var checkPkg = fs.existsSync(path.join(process.cwd(), 'package.json')) || args.l || args.license || args.r || args.repo || null
+
+if (!checkPkg) {
+  console.error('no package.json found and no license and repo name set!')
+  usage()
+  process.exit(1)
+}
+
+var pkg = require(path.join(process.cwd(), 'package.json')) 
 
 // one liner
 var oneliner = pkg.description || 'one-liner description of the module'
