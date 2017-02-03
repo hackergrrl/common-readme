@@ -1,7 +1,7 @@
 {
   "name": "common-readme",
   "description": "Generates a readme for your node modules.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "repository": {
     "url": "git://github.com/noffle/common-readme.git"
   },
