@@ -6,13 +6,11 @@ background details relevant to understanding what this module does
 
 ## Usage
 
-Let's do X:
-
 ```js
 $$EXAMPLE
 ```
 
-This will output
+outputs
 
 ```
 hello warld
