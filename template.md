@@ -13,7 +13,7 @@ $$EXAMPLE
 outputs
 
 ```
-hello warld
+hello world
 ```
 
 ## API
