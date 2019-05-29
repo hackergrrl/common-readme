@@ -6,35 +6,38 @@ background details relevant to understanding what this module does
 
 ## Usage
 
-```js
-$$EXAMPLE
-```
+```javascript
+const $$rePo = require('$$REPO')
+const foo = $$rePo.foo()
 
-outputs
-
-```
-hello warld
+console.log(foo.bar) // => 42
 ```
 
 ## API
 
 ```js
-var $$rePo = require('$$REPO')
+const $$rePo = require('$$REPO')
 ```
 
 See [api_formatting.md](api_formatting.md) for tips.
 
-## Install
+## Installation
 
-With [npm](https://npmjs.org/) installed, run
+With [npm](https://npmjs.org/):
 
+```shell
+npm install $$REPO
 ```
-$ npm install $$REPO
+
+With [yarn](https://yarnpkg.com/en/):
+
+```shell
+yarn add $$REPO
 ```
 
 ## Acknowledgments
 
-$$REPO was inspired by..
+$$REPO was inspired by...
 
 ## See Also
 
