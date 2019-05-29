@@ -53,7 +53,7 @@ function getExampleJs () {
   try {
     return fs.readFileSync(path.join(__dirname, 'example.js'))
   } catch (e) {
-    return "var $$$rePo = require('$$$REPO')\n\nconsole.log('hello warld')"
+    return "var $$$rePo = require('$$$REPO')\n\nconsole.log('hello world') // => hello world"
   }
 }
 

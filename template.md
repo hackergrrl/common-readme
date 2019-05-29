@@ -7,10 +7,7 @@ background details relevant to understanding what this module does
 ## Usage
 
 ```javascript
-const $$rePo = require('$$REPO')
-const foo = $$rePo.foo()
-
-console.log(foo.bar) // => 42
+$$EXAMPLE
 ```
 
 ## API
