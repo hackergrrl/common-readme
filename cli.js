@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-var spawn = require('child_process').spawn
 var fs = require('fs')
 var path = require('path')
 var camel = require('camelcase')
@@ -26,7 +25,7 @@ if (!checkPkg) {
   process.exit(1)
 }
 
-var pkg = require(path.join(process.cwd(), 'package.json')) 
+var pkg = require(path.join(process.cwd(), 'package.json'))
 
 // one liner
 var oneliner = pkg.description || 'one-liner description of the module'
@@ -54,7 +53,7 @@ function getExampleJs () {
   try {
     return fs.readFileSync(path.join(__dirname, 'example.js'))
   } catch (e) {
-    return "var $$$rePo = require('$$$REPO')\n\nconsole.log('hello warld')"
+    return "var $$$rePo = require('$$$REPO')\n\nconsole.log('hello world') // => hello world"
   }
 }
 
